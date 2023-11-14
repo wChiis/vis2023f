@@ -27,13 +27,13 @@ function generateUsername() {
     return username;
   }
   function generateScores() {
-    const generateScores = [];
+    const generatescores = [];
   
     for (let i = 0; i < 10; i++) {
-      generateScores.push(Math.floor(Math.random() * 10));
+      generatescores.push(Math.floor(Math.random() * 10));
     }
   
-    return generateScores;
+    return generatescores;
   }
   
   function generateDummyCsvTable() {
@@ -53,7 +53,7 @@ function generateUsername() {
       let studentId = generateID();
       let studentName = "User";
       let githubId = generateUsername();
-      let generateScores = generateScores();
+      let generatescores = generateScores();
   
       let rowItems = [index, className, studentId, studentName, githubId];
   
@@ -61,9 +61,9 @@ function generateUsername() {
         var cell = row.insertCell();
         cell.innerHTML = rowItems[j];
       }
-      for (let j = 0; j < generateScores.length; j++) {
+      for (let j = 0; j < generatescores.length; j++) {
         var cell = row.insertCell();
-        cell.innerHTML = generateScores[j];
+        cell.innerHTML = generatescores[j];
       }
     } 
   
@@ -87,7 +87,7 @@ function generateUsername() {
       let studentId = generateID();
       let studentName = "User";
       let githubId = generateUsername();
-      let generateScores = generateScores();
+      let generatescores = generateScores();
   
       let rowItems = [index, className, studentId, studentName, githubId];
   
@@ -95,9 +95,9 @@ function generateUsername() {
         var cell = row.insertCell();
         cell.innerHTML = rowItems[j];
       }
-      for (let j = 0; j < generateScores.length; j++) {
+      for (let j = 0; j < generatescores.length; j++) {
         var cell = row.insertCell();
-        cell.innerHTML = `<img src='../score/${generateScores[j]}.svg' width='40' height='40'>`;
+        cell.innerHTML = `<img src='../score/${generatescores[j]}.svg' width='40' height='40'>`;
       }
     } 
   
