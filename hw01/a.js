@@ -71,7 +71,7 @@ function generateUsername() {
   }
   
   function generateAppleScoreboardTable() {
-    let divElement = document.getElementById("dummy-csv-table");
+    let divElement = document.getElementById("apple-scoreboard-table");
     let table = document.createElement("table");
   
     let header = table.createTHead();
