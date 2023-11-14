@@ -70,7 +70,7 @@ function generateUsername() {
     divElement.appendChild(table);
   }
   
-  function generateAppleScoreboardTable() {
+  function generateAppleTable() {
     let divElement = document.getElementById("apple-scoreboard-table");
     let table = document.createElement("table");
   
