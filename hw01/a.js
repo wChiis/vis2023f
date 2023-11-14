@@ -4,7 +4,7 @@ const FirstID = ["111", "112"];
 const SecondID = ["590", "598", "C52", "C53", "C71"];
 const characters= '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 function randomMajor(){
-  return majors[Math.floor(Math.random() * majors.length)];
+    return classes[Math.random() * classes.length];
 }
 
 function generateID(){
