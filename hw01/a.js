@@ -8,8 +8,8 @@ function randomclass(){
 }
 
 function generateID(){
-  const partOne = firstPartID[Math.floor(Math.random() * firstPartID.length)];
-  const partTwo = secondPartID[Math.floor(Math.random() * secondPartID.length)];
+  const partOne = FirstID[Math.floor(Math.random() * FirstID.length)];
+  const partTwo = SecondID[Math.floor(Math.random() * SecondID.length)];
   const partThree = (Math.floor(Math.random() * 999) + 1).toString().padStart(3, '0');
   
   return partOne + partTwo + partThree;
