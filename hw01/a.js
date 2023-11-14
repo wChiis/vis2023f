@@ -3,7 +3,7 @@ const classes = ['資工系', '資工所', '電資AI', '電資資安', '創新AI
 const FirstID = ["111", "112"];
 const SecondID = ["590", "598", "C52", "C53", "C71"];
 const characters= '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-function randomMajor(){
+function randomclass(){
     return classes[Math.random() * classes.length];
 }
 
