@@ -220,58 +220,87 @@
       </table>
     </div>
   </div>
-
-  <!-- ------------------------------------------------>
-  <div class="row hw12">
-    <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+    <!-- ------------------------------------------------>
+    <div class="row hw12">
+      <div class="col-md-12 twenty">
+        <table>
+          <tr>
+            <th>總分</th>
+            <th>完成後打勾</th>
+            <th>配分</th>
+            <th>分項描述</th>
+          </tr>
+          <tr>
+            <td rowspan="7" id="myTotal"></td>
+            <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked=""></td>
+            <td id='m1'>2</td>
+            <td>Simple baseline - 產生 Dummy CSV 虛構成績表。</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
+            <td id='m2'>6</td>
+            <td>Medium baseline - 繪製蘋果成績表</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
+            <td id='m3'>2</td>
+            <td>Strong baseline - 描述、描述、描述 </td>
+          </tr>
+        </table>
+      </div>
     </div>
-  </div>
 
-  <!-- ------------------------------------------------>
+    <!-- ------------------------------------------------>
+    <div class="row hw12">
+      <div class="col-md-12 twenty">Simple baseline - 產生 Dummy CSV 虛構成績表。</div>
+      <iframe src="./src-easy/index.html" width="100%" height="300px"></iframe>
+    </div>
 
-  <!-- ------------------------------------------------>
+    <!-- ------------------------------------------------>
+    <div class="row hw12">
+      <div class="col-md-12 twenty">Medium baseline - 繪製蘋果成績表</div>
+      <iframe src="./src-medium-v3/index.html" width="100%" height="300px"></iframe>
+    </div>
 
 
-<script>
-  $(function() {
-    var f = function() {
-      $(this).next().text($(this).is(':checked') ? '做完' : '未做完');
-    };
-    $('input').change(f).trigger('change');
-  });
+    <script>
+      $(function () {
+        var f = function () {
+          $(this).next().text($(this).is(':checked') ? '做完' : '未做完');
+        };
+        $('input').change(f).trigger('change');
+      });
 
-  d3.select("#myCheckbox1").on("change",update);
-  d3.select("#myCheckbox2").on("change",update);
-  d3.select("#myCheckbox3").on("change",update);
-  d3.select("#myCheckbox4").on("change",update);
-  d3.select("#myCheckbox5").on("change",update);
-  d3.select("#myCheckbox6").on("change",update);
-  d3.select("#myCheckbox7").on("change",update);
+      d3.select("#myCheckbox1").on("change", update);
+      d3.select("#myCheckbox2").on("change", update);
+      d3.select("#myCheckbox3").on("change", update);
+      d3.select("#myCheckbox4").on("change", update);
+      d3.select("#myCheckbox5").on("change", update);
+      d3.select("#myCheckbox6").on("change", update);
+      d3.select("#myCheckbox7").on("change", update);
 
-  update();
-  
-  function update(){
+      update();
 
-    var score = 0;
+      function update() {
 
-    if (d3.select("#myCheckbox1").property("checked")){
-      score += parseInt(d3.select('#m1').html());
-    }
+        var score = 0;
 
-    if (d3.select("#myCheckbox2").property("checked")){
-      score += parseInt(d3.select('#m2').html());   
-    }
+        if (d3.select("#myCheckbox1").property("checked")) {
+          score += parseInt(d3.select('#m1').html());
+        }
 
-    if (d3.select("#myCheckbox3").property("checked")){
-      score += parseInt(d3.select('#m3').html());   
-    }
+        if (d3.select("#myCheckbox2").property("checked")) {
+          score += parseInt(d3.select('#m2').html());
+        }
 
-    d3.select("#myTotal").html(score);    
-  }
-</script>
+        if (d3.select("#myCheckbox3").property("checked")) {
+          score += parseInt(d3.select('#m3').html());
+        }
+
+        d3.select("#myTotal").html(score);
+      }
+    </script>
 
 </body>
+
 </html>
