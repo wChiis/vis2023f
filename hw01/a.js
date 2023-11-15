@@ -13,7 +13,7 @@ function generateID(){
   const partThree = (Math.floor(Math.random() * 999) + 1).toString().padStart(3, '0');
   
   return partOne + partTwo + partThree;
-}
+   }
 
 
 function generateUsername() {
@@ -26,7 +26,14 @@ function generateUsername() {
   
     return username;
   }
-  function generateScores() {
+
+ function randomclass(){
+    
+    return classes[parseInt(Math.random() * classes.length)];
+    
+  }
+
+ function generateScores() {
     const generatescores = [];
   
     for (let i = 0; i < 10; i++) {
