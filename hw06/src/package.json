@@ -1,0 +1,14 @@
+{
+  "name": "bc3833f848ccf3c2",
+  "main": "bc3833f848ccf3c2@78.js",
+  "version": "78.0.0",
+  "homepage": "https://observablehq.com/d/bc3833f848ccf3c2",
+  "author": {
+    "name": "w7s's Workspace",
+    "url": "https://observablehq.com/@w7s-ws"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
